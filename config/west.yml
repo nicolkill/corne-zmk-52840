@@ -1,14 +1,21 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: urob
+      url-base: https://github.com/urob
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
   projects:
+    # zmk firmware by @urob
     - name: zmk
-      remote: zmkfirmware
+      remote: urob
       revision: main
       import: app/west.yml
+
+    # include corne with dongle pro_micro and xiao compatible
+    - name: zmk-config
+      remote: mctechnology17
+      revision: main
+    # dongle display view
     - name: zmk-dongle-display-view
       remote: mctechnology17
       revision: main
